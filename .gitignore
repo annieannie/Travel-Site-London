@@ -1,10 +1,4 @@
-node_modules
-
-
-app/
-
-
-.gitignore
-
-
+node_modules 
+app/ 
+.gitignore 
 .DS_Store
