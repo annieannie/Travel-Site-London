@@ -59,7 +59,7 @@ gulp.task('images', function () {
 
 gulp.task('moveFonts', function () {
   gulp.src('./node_modules/bootStrap/dist/fonts/*.{eot, svg, ttf, woff, woff2}')
-  .pipe(gulp.dest('APPPATH.fonts'));
+  .pipe(gulp.dest(APPPATH.fonts));
 });
 
 gulp.task('scripts',['clean-scripts'], function () {
