@@ -42,8 +42,8 @@ gulp.task('clean-scripts', function(){
 });
 
 gulp.task('sass', function () {
-  var sassFiles;
-  sassFiles = gulp.src(SOURCEPATHS.sassApp)
+
+  var sassFiles = gulp.src(SOURCEPATHS.sassApp)
   .pipe(autoprefixer())
   .pipe(sass({outputstyle: 'expanded'}).on('error', sass.logError))
     .pipe(concat( 'app.css'))
@@ -56,11 +56,6 @@ gulp.task('images', function () {
   .pipe(imagemin())
   .pipe(gulp.dest(APPPATH.img));
 });
-
-//gulp.task('moveFonts', function () {
-//  gulp.src('./node_modules/bootStrap/dist/fonts/*.{eot, svg, ttf, woff, woff2}')
-  //.pipe(gulp.dest(APPPATH.fonts));
-//});
 
 gulp.task('scripts',['clean-scripts'], function () {
   gulp.src(SOURCEPATHS.jsSource)
@@ -105,11 +100,6 @@ gulp.task('minifyHtml', function () {
    .pipe(gulp.dest(APPPATH.root));
  });
 
-//gulp.task('copy', ['clean-html'], function () {
-  //gulp.src(SOURCEPATHS.htmlSource)
-  //.pipe(gulp.dest(APPPATH.root));
-//});
-
 gulp.task('serve', ['sass'], function () {
   browserSync.init([APPPATH.css + '/*.css', APPPATH.root + '/*.html', APPPATH.js + '/*.js'], {
     server: {
@@ -118,9 +108,9 @@ gulp.task('serve', ['sass'], function () {
   })
 });
 
+
 gulp.task('watch', ['serve', 'sass', 'clean-html','html', 'clean-scripts', 'scripts', 'images'], function(){
   gulp.watch([SOURCEPATHS.sassSource], ['sass']);
-  //gulp.watch([SOURCEPATHS.htmlSource], ['copy']);
   gulp.watch([SOURCEPATHS.jsSource], ['scripts']);
   gulp.watch([SOURCEPATHS.htmlSource, SOURCEPATHS.htmlPartialSource], ['html']);
 });
