@@ -5,6 +5,7 @@ footer.site-footer {
 
   h2 {
     margin: 0;
+    font-size: map-get($heading-font-size, h2);
   }
 
   p.site-info {
@@ -15,6 +16,5 @@ footer.site-footer {
     margin-top: 20px;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 1.2rem;
   }
 }

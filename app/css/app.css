@@ -292,7 +292,7 @@ table {
   table > caption {
     text-align: left;
     font-family: "Bitter", serif;
-    font-size: 36pxm;
+    font-size: 36px;
     font-weight: 700;
     padding: 5px;
     color: #FFBA00;
@@ -313,7 +313,7 @@ table {
       border-radius: 1px dotted #005170; }
 
 div.services h2 {
-  font-size: 36pxm; }
+  font-size: 36px; }
 
 .services-list {
   list-style: none;
@@ -332,7 +332,8 @@ footer.site-footer {
   margin-top: 30px;
   color: #FFFFFF; }
   footer.site-footer h2 {
-    margin: 0; }
+    margin: 0;
+    font-size: 36px; }
   footer.site-footer p.site-info {
     text-align: center;
     background-color: #FFBA00;
@@ -340,5 +341,4 @@ footer.site-footer {
     padding: 10px 0;
     margin-top: 20px;
     font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.2rem; }
+    text-transform: uppercase; }
